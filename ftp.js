@@ -32,11 +32,16 @@ module.exports = function (RED) {
       'password': credentials.password || 'anonymous@',
       'connTimeout': n.connTimeout || 10000,
       'pasvTimeout': n.pasvTimeout || 10000,
-      'keepalive': n.keepalive || 10000
+      'keepalive': n.keepalive || 10000,
+      'passive': n.activeMode === undefined ? true : !n.activeMode,
+      'activeIp': n.activeIp || '127.0.0.1',
+      'activePortLo': n.activePortLo || 41250,
+      'activePortHi': n.activePortHi || 41275
+
     };
   }
 
-  RED.nodes.registerType('ftp', FtpNode, {
+  RED.nodes.registerType('ftp active', FtpNode, {
     credentials: {
       password: { type: 'password' }
     }
@@ -105,5 +110,5 @@ module.exports = function (RED) {
       this.error('missing ftp configuration');
     }
   }
-  RED.nodes.registerType('ftp in', FtpInNode);
+  RED.nodes.registerType('ftp in active', FtpInNode);
 }

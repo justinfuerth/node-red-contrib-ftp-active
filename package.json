@@ -3,7 +3,7 @@
   "version": "0.0.6",
   "description": "A Node-RED node to FTP Client.",
   "dependencies": {
-    "ftp": "0.x"
+    "ftp": "git://github.com/justinfuerth/node-ftp.git"
   },
   "repository": {
     "type": "git",

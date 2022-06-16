@@ -47,6 +47,19 @@
     <label for="node-config-input-secureOptions" style="width: 20%; vertical-align: top;"> <span data-i18n="ftp.label.secureOptions"></span></label>
     <input type="text" id="node-config-input-secureOptions" style="width: 35%; vertical-align: top;">
   </div>
+  <div class="form-row">
+    <label for="node-config-input-activeMode"><i class="fa fa-square-check"></i> <span data-i18n="ftp.label.activeMode"></span></label>
+    <input type="checkbox" id="node-config-input-activeMode" placeholder="once" style="width: 10%; vertical-align: top;">
+  </div>
+  <div class="form-row">
+    <label for="node-config-input-activeIp"<i class="fa fa-bookmark"> <span data-i18n="ftp.label.activeIp"></span></i></label>
+    <input type="text" id="node-config-input-activeIp" placeholder="localhost" style="width: 40%;" />
+  </div>
+  <div class="form-row">
+    <label for="node-config-input-activePortLo" style="margin-left: 10px; width: 100px; "> <span data-i18n="ftp.label.activePortLo"></span></label>
+    <input type="text" id="node-config-input-activePortLo" placeholder="41250" style="width:100px">
+    <input type="text" id="node-config-input-activePortHi" placeholder="41275" style="width:100px">
+  </div>
 </script>
 
 <script type="text/x-red" data-help-name="ftp">
@@ -125,7 +138,11 @@
       user: { value: '' },
       connTimeout: { value: '' },
       pasvTimeout: { value: '' },
-      keepalive: { value: '' }
+      keepalive: { value: '' },
+      activeMode: { value: false },
+      activeIp: { value: '' },
+      activePortLo: { value: 41250 },
+      activePortHi: { value: 41275 }
     },
     credentials: {
       password: { type: 'password', required: true },

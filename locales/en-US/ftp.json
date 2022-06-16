@@ -9,7 +9,10 @@
             "pasvTimeout" : "PASV Timeout",
             "keepalive" : "Keepalive",
             "secure" : "Data connection encryption",
-            "secureOptions" : "Secure Options"
+            "secureOptions" : "Secure Options",
+            "activeMode": "Active Mode",
+            "activeIp": "Active IP",
+            "activePortLo": "Active Port Range"
         }
     },
     "ftp_in" : {
